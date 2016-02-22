@@ -1,6 +1,8 @@
 package ua.snakes.ensables.model;
 
-
+/**
+ * Serves to represent a snake from Standard Snake Ensemble Serialisation File.
+ */
 public class Snake {
 
     private String name;

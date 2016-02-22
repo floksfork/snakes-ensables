@@ -10,7 +10,7 @@ class EnsemblePrinterTest extends Specification {
 
     def "no NullPointerException if list of names is empty"() {
         when:
-        p.writeToConsole(10, 10, 10, null)
+        p.writeToConsole(10, 10, null)
 
         then:
         notThrown(NullPointerException)

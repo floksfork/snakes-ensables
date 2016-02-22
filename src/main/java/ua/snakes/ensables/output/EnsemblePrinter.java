@@ -2,15 +2,27 @@ package ua.snakes.ensables.output;
 
 import java.util.List;
 
+/**
+ * Serves to print ensemble simulation result.
+ */
 public class EnsemblePrinter {
-    public void writeToConsole(int sings, int mrps, int snakes, List<String> names) {
 
-        if (names == null) return;
+    /**
+     * Prints to console ensemble simulation result.
+     *
+     * @param mrps - maximum repeats per snake allowed.
+     * @param snakesNumber - number of snakes in the ensemble.
+     * @param names - list representation of the song performed by the snakes.
+     *              The list should contain snakes' names, who have performed the longest song.
+     */
+    public void writeToConsole(int mrps, int snakesNumber, List<String> names) {
+
+        if (names == null || names.isEmpty()) return;
 
         System.out.println(
-                "3.0.11: Oleksandr Siianko:"
-                        + sings + " sings in a longest" + mrps + "-MRPS song"
-                        + " for this" + snakes + "-snake ensemble:"
+                "3.0.11: Oleksandr Siianko: "
+                        + names.size() + " sings in a longest " + mrps + "-MRPS song"
+                        + " for this " + snakesNumber + "-snake ensemble:"
         );
 
         for (int i = 0; i < names.size(); i++) {

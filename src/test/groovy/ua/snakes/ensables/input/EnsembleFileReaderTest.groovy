@@ -33,6 +33,11 @@ class EnsembleFileReaderTest extends Specification {
         reader.read(EMPTY) == [:]
     }
 
+    def "return empty map if file has wrong format"(){
+        expect:
+        reader.read("wrong.format") == [:]
+    }
+
     def "return full map if file has data"() {
         given:
         def data1 = [

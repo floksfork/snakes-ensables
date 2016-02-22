@@ -1,27 +1,31 @@
 package ua.snakes.ensables.model;
 
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
+/**
+ * Serves to build an ensemble.
+ */
 public class Ensemble {
-    Map<Snake, Set<Snake>> singingSnakes;
+    private Map<Snake, List<Snake>> singingSnakes;
 
     public Ensemble() {
-        singingSnakes = new HashMap<Snake, Set<Snake>>();
+        singingSnakes = new HashMap<Snake, List<Snake>>();
     }
 
     public Ensemble(Map<Integer, Snake> snakes) {
         if (snakes == null) {
-            singingSnakes = new HashMap<Snake, Set<Snake>>();
+            singingSnakes = new HashMap<Snake, List<Snake>>();
         } else {
             buildEnsemble(snakes);
         }
     }
 
-    public Map<Snake, Set<Snake>> getSingingSnakes() {
+    /**
+     * @return map: Map<Snake, List<Snake>> , where @key is the snake who will start singing first
+     * and @value - rest related snakes, who may sign immediately after first snake.
+     */
+    public Map<Snake, List<Snake>> getSingingSnakes() {
         return singingSnakes;
     }
 
@@ -33,7 +37,7 @@ public class Ensemble {
     }
 
     private void buildEnsemble(Map<Integer, Snake> snakes) {
-        singingSnakes = new HashMap<Snake, Set<Snake>>(snakes.size());
+        singingSnakes = new HashMap<Snake, List<Snake>>(snakes.size());
 
         for(Snake snake: snakes.values()){
             Snake beforeMe = snakes.get(snake.getTail());
@@ -53,10 +57,10 @@ public class Ensemble {
     }
 
     private void addSingingSnake(Snake first, Snake next){
-        Set snakes = singingSnakes.get(first);
+        List snakes = singingSnakes.get(first);
 
         if (snakes == null){
-            snakes = new HashSet();
+            snakes = new LinkedList();
             singingSnakes.put(first, snakes);
         }
 

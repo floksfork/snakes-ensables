@@ -9,11 +9,24 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Serves for reading Standard Snake Ensemble Serialisation Files.
+ */
 public class EnsembleFileReader {
 
+    /**
+     * Reads Standard Snake Ensemble Serialisation File.
+     *
+     * @param csvFile - path(relative or absolute) to Standard Snake Ensemble Serialisation File.
+     *
+     * @return map: Map<Integer, Snake> - represents data from Standard Snake Ensemble Serialisation File,
+     * where the @key is the line number from the file and @value is data of the line.
+     */
     public Map<Integer, Snake> read(String csvFile) {
 
         if (!isValidInput(csvFile)) {
+            System.out.println("File has not been specified or has a wrong format." +
+                    " Please use *.csv files.");
             return new HashMap<Integer, Snake>();
         }
 
@@ -21,7 +34,7 @@ public class EnsembleFileReader {
     }
 
     private boolean isValidInput(String input) {
-        return input != null && !input.isEmpty();
+        return input != null && !input.isEmpty() && input.endsWith(".csv");
     }
 
     private Map<Integer, Snake> dataFromFile(String file){
@@ -57,12 +70,10 @@ public class EnsembleFileReader {
             }
         } catch (FileNotFoundException e) {
             System.out.println("Could not read file: " + file);
-            e.printStackTrace();
         } catch(IOException e){
             System.out.println("Could not extract data from file: " + file);
-            e.printStackTrace();
         }catch(NumberFormatException e){
-            e.printStackTrace();
+            System.out.println("Wrong integer value at line: " + lineNumber);
         }
         finally {
             if (br != null) {
