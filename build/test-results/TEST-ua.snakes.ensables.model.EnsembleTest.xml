@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ua.snakes.ensables.model.EnsembleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-02-21T22:00:52" hostname="magic-box" time="0.083">
+  <properties/>
+  <testcase name="default constructor is OK" classname="ua.snakes.ensables.model.EnsembleTest" time="0.042"/>
+  <testcase name="constructor based on snakes is OK on null input" classname="ua.snakes.ensables.model.EnsembleTest" time="0.028"/>
+  <testcase name="building ensemble in different ways[0]" classname="ua.snakes.ensables.model.EnsembleTest" time="0.006"/>
+  <testcase name="building ensemble in different ways[1]" classname="ua.snakes.ensables.model.EnsembleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

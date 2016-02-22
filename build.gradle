@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: "groovy"
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spock dependencies
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+    compile "org.spockframework:spock-core:1.0-groovy-2.4"
+    compile "cglib:cglib-nodep:3.1"
+}

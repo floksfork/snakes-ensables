@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ua.snakes.ensables.SongExpertTest" tests="6" skipped="0" failures="1" errors="0" timestamp="2016-02-21T23:11:46" hostname="magic-box" time="0.063">
+  <properties/>
+  <testcase name="no song is told when no ensemble[0]" classname="ua.snakes.ensables.SongExpertTest" time="0.03"/>
+  <testcase name="no song is told when no ensemble[1]" classname="ua.snakes.ensables.SongExpertTest" time="0.0"/>
+  <testcase name="no song is told when no ensemble[2]" classname="ua.snakes.ensables.SongExpertTest" time="0.0"/>
+  <testcase name="no song is told when no ensemble[3]" classname="ua.snakes.ensables.SongExpertTest" time="0.001"/>
+  <testcase name="no song is told when no ensemble[4]" classname="ua.snakes.ensables.SongExpertTest" time="0.0"/>
+  <testcase name="N-name song for 0-MPRS" classname="ua.snakes.ensables.SongExpertTest" time="0.0">
+    <failure message="org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object 'Snake{name='Rod', tail=0, head=1, pitch=0.0}' with class 'ua.snakes.ensables.model.Snake' to class 'int'" type="org.codehaus.groovy.runtime.typehandling.GroovyCastException">org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object 'Snake{name='Rod', tail=0, head=1, pitch=0.0}' with class 'ua.snakes.ensables.model.Snake' to class 'int'
+	at ua.snakes.ensables.SongExpertTest.N-name song for 0-MPRS(SongExpertTest.groovy:44)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
