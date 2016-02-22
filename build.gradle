@@ -18,6 +18,6 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'ua.snakes.ensables.LongSnakeSong'
+        attributes 'Main-Class': 'ua.snakes.ensembles.LongSnakeSong'
     }
 }

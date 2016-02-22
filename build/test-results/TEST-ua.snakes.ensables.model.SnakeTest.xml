@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ua.snakes.ensables.model.SnakeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-02-21T18:46:35" hostname="magic-box" time="0.064">
-  <properties/>
-  <testcase name="equals and hashCode are OK for 4-param constructor" classname="ua.snakes.ensables.model.SnakeTest" time="0.064"/>
-  <testcase name="equals and hashCode are OK for 3-param constructor" classname="ua.snakes.ensables.model.SnakeTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
